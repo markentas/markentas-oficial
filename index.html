@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Markentas: Catálogos digitales autogestionables para comercios. Administrá tus productos desde tu propio panel y recibí pedidos directos por WhatsApp." />
+    <meta name="keywords" content="markentas, catálogo digital, salvador mazza, ventas por whatsapp, panel de control, ecommerce local, diseño web profesional, catálogo autogestionable" />
+    <meta name="author" content="Markentas" />
+
+    <link rel="canonical" href="https://markentas.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://markentas.com/" />
+    <meta property="og:title" content="Markentas | Tu Catálogo con Panel de Control" />
+    <meta property="og:description" content="Digitalizá tu stock. Gestioná precios y productos desde tu panel exclusivo y vendé más por WhatsApp." />
+    <meta property="og:image" content="https://markentas.com/img/markentas-preview.png" /> 
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://markentas.com/" />
+    <meta property="twitter:title" content="Markentas | Gestión Profesional de Ventas" />
+    <meta property="twitter:description" content="Llevá tu negocio al siguiente nivel con un catálogo inteligente y panel de administración propio." />
+    <meta property="twitter:image" content="https://markentas.com/img/markentas-preview.png" />
+        
+    <title>Markentas - Soluciones Digitales</title>
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --accent: #0ea5e9;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --success: #10b981;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--dark);
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .hero-text h1 span {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 35px;
+            animation: fadeInUp 0.8s ease-out 0.1s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Problema Section */
+        .problema {
+            background: var(--white);
+        }
+
+        .problema-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .problema-card {
+            flex: 0 0 calc(33.333% - 30px);
+            max-width: calc(33.333% - 30px);
+            padding: 35px;
+            background: var(--light);
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        @media (max-width: 968px) {
+            .problema-card {
+                flex: 0 0 calc(50% - 30px);
+                max-width: calc(50% - 30px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .problema-card {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .problema-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .problema-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .problema-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .problema-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Solucion Section */
+        .solucion {
+            background: linear-gradient(180deg, #f0f9ff 0%, var(--light) 100%);
+        }
+
+        .solucion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .solucion-card {
+            padding: 35px;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .solucion-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .solucion-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .solucion-icon i {
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        .solucion-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .solucion-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Dominio Section */
+        .dominio {
+            background: var(--white);
+        }
+
+        .dominio-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .dominio-text h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .dominio-text p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .dominio-features {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .dominio-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            font-size: 1rem;
+            color: var(--dark);
+        }
+
+        .dominio-features li i {
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+
+        .dominio-price {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 40px;
+            border-radius: 20px;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .dominio-price .price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .dominio-price .price-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .dominio-price p {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Planes Section */
+        .planes {
+            background: linear-gradient(180deg, #f0f9ff 0%, var(--light) 100%);
+        }
+
+        .planes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .plan-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .plan-card.premium {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .plan-card.premium:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--white);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--gray);
+        }
+
+        .plan-divider {
+            height: 1px;
+            background: #e2e8f0;
+            margin: 25px 0;
+        }
+
+        .plan-features {
+            list-style: none;
+        }
+
+        .plan-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            font-size: 0.95rem;
+            color: var(--dark);
+        }
+
+        .plan-features li i {
+            color: var(--success);
+            font-size: 1rem;
+        }
+
+        .plan-features li.missing {
+            color: var(--gray);
+        }
+
+        .plan-features li.missing i {
+            color: #cbd5e1;
+        }
+
+        .plan-card .btn {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        /* Garantia Section */
+        .garantia {
+            background: var(--white);
+        }
+
+        .garantia-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .garantia-card {
+            flex: 0 0 calc(33.333% - 30px);
+            max-width: calc(33.333% - 30px);
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media (max-width: 968px) {
+            .garantia-card {
+                flex: 0 0 calc(50% - 30px);
+                max-width: calc(50% - 30px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .garantia-card {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .garantia-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .garantia-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .garantia-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Clientes Section */
+        .clientes {
+            background: linear-gradient(180deg, #f0f9ff 0%, var(--light) 100%);
+        }
+
+        .clientes-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .cliente-card {
+            flex: 0 0 calc(33.333% - 30px);
+            max-width: calc(33.333% - 30px);
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        @media (max-width: 968px) {
+            .cliente-card {
+                flex: 0 0 calc(50% - 30px);
+                max-width: calc(50% - 30px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .cliente-card {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .cliente-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cliente-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .cliente-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .cliente-card:hover .cliente-image img {
+            transform: scale(1.05);
+        }
+
+        .cliente-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .cliente-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .cliente-info p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 35px;
+        }
+
+        .cta .btn {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-logo i {
+            color: var(--primary);
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            /* --- Temporalmente */
+            display: none;
+        }
+
+        .footer-social a {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-contact {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .footer-contact a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            color: var(--primary);
+        }
+
+        .footer-copy {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .dominio-content {
+                grid-template-columns: 1fr;
+            }
+
+            .plan-card.premium {
+                transform: scale(1);
+            }
+
+            .plan-card.premium:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .btn {
+                padding: 14px 24px;
+                font-size: 0.9rem;
+            }
+
+            .dominio-price .price {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-link"></i>
+                    Markentas
+                </a>
+                <a href="https://wa.me/5493873407054?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20cat%C3%A1logo%20digital" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    Consultar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Tu Negocio en <span>un Link</span></h1>
+                    <p>Catálogo digital autogestionable para tu negocio. Administrá tus productos, precios e imágenes desde tu propio panel de control. Tus clientes te encuentran fácil y te piden por WhatsApp.</p>
+                    <div class="hero-buttons">
+                        <a href="#planes" class="btn btn-primary">Quiero mi Catálogo</a>
+                        <a href="https://wa.me/5493873407054?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20servicio" target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            Hablar con Asesor
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=500&fit=crop" alt="Catálogo Digital">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problema Section -->
+    <section class="problema" id="problema">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Te pasa esto?</h2>
+                <p>Estos son los problemas comunes que enfrentan los negocios locales</p>
+            </div>
+            <div class="problema-grid">
+                <div class="problema-card">
+                    <i class="fas fa-tags"></i>
+                    <h3>Precios Desactualizados</h3>
+                    <p>Cambiar precios implica reimprimir folletos o actualizar múltiples plataformas manualmente.</p>
+                </div>
+                <div class="problema-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Consultas Repetitivas</h3>
+                    <p>Los clientes preguntan lo mismo una y otra vez: precios, productos disponibles, horarios.</p>
+                </div>
+                <div class="problema-card">
+                    <i class="fas fa-image"></i>
+                    <h3>Falta de Imagen Profesional</h3>
+                    <p>Sin presencia digital atractiva, perdés clientes que buscan negocios confiables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solucion Section -->
+     <section class="solucion" id="solucion">
+        <div class="container">
+            <div class="section-header">
+                <h2>La Solución</h2>
+                <p>Un sistema inteligente diseñado para que vendas más sin complicaciones técnicas</p>
+            </div>
+            <div class="solucion-grid">
+                <div class="solucion-card">
+                    <div class="solucion-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Panel de Control Propio</h3>
+                    <p>Accedé a tu administrador exclusivo desde cualquier dispositivo. Gestioná tus productos de forma profesional.</p>
+                </div>
+                <div class="solucion-card">
+                    <div class="solucion-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Gestión en Tiempo Real</h3>
+                    <p>Cualquier cambio de precio o stock que realices en tu panel se actualiza al instante en tu catálogo online.</p>
+                </div>
+                <div class="solucion-card">
+                    <div class="solucion-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Pedidos Directos</h3>
+                    <p>Tus clientes eligen lo que quieren y te envían el pedido detallado directamente a tu WhatsApp.</p>
+                </div>
+                <div class="solucion-card">
+                    <div class="solucion-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Infraestructura Robusta</h3>
+                    <p>Tu negocio respaldado por la red global de Cloudflare. Máxima velocidad y seguridad garantizada 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dominio Section -->
+    <section class="dominio" id="dominio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tu Marca, Tu Identidad</h2>
+                <p>Tu catálogo digital tendrá una dirección web profesional que facilitará que tus clientes te encuentren y compartan.</p>
+            </div>
+            <div class="dominio-content">
+                <div class="dominio-text">
+                    <h2>Tu Espacio en la Red</h2>
+                    <p>En Markentas nos encargamos de que tu negocio se vea profesional desde el primer día con una infraestructura de nivel mundial.</p>
+                    <ul class="dominio-features">
+                        <li><i class="fas fa-check-circle"></i> URL Profesional: <strong>tunegocio.markentas.com</strong></li>
+                        <li><i class="fas fa-check-circle"></i> Panel de administración exclusivo para tu stock</li>
+                        <li><i class="fas fa-check-circle"></i> Seguridad SSL (Candadito) activa siempre</li>
+                        <li><i class="fas fa-check-circle"></i> Opción de dominio propio (ej: .com, .ar)</li>
+                    </ul>
+                </div>
+                <div class="dominio-price">
+                    <div class="price">$20.000</div>
+                    <div class="price-label">Configuración Inicial</div>
+                    <p>Puesta en marcha de tu panel y despliegue técnico</p>
+                    <a href="#planes" class="btn" style="background: white; color: var(--primary); margin-top: 20px;">Ver Planes Mensuales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes Section -->
+    <section class="planes" id="planes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Planes</h2>
+                <p>Elegí el plan que mejor se adapte a tu negocio</p>
+            </div>
+            <div class="planes-grid">
+                <div class="plan-card">
+                    <h3 class="plan-name">Plan Base</h3>
+                    <div class="plan-price">$50.000<span>/mes</span></div>
+                    <div class="plan-divider"></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Hasta 20 productos</li>
+                        <li><i class="fas fa-check"></i> Galería de imágenes</li>
+                        <li><i class="fas fa-check"></i> Slider promocional</li>
+                        <li><i class="fas fa-check"></i> Mapa de ubicación</li>
+                        <li><i class="fas fa-check"></i> Redes sociales</li>
+                        <li><i class="fas fa-check"></i> Botón de contacto</li>
+                        <li><i class="fas fa-check"></i> Botón WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Mantenimiento incluido</li>
+                        <li class="missing"><i class="fas fa-times"></i> Personalización por eventos</li>
+                        <li class="missing"><i class="fas fa-times"></i> Cambios de diseño</li>
+                        <li class="missing"><i class="fas fa-times"></i> Soporte prioritario</li>
+                    </ul>
+                    <a href="https://wa.me/5493873407054?text=Hola%2C%20quiero%20el%20Plan%20Base%20de%20Markentas" target="_blank" class="btn btn-primary">Elegir Plan Base</a>
+                </div>
+                <div class="plan-card premium">
+                    <span class="plan-badge">Más Popular</span>
+                    <h3 class="plan-name">Plan Premium</h3>
+                    <div class="plan-price">$80.000<span>/mes</span></div>
+                    <div class="plan-divider"></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Hasta 50 productos</li>
+                        <li><i class="fas fa-check"></i> Galería de imágenes</li>
+                        <li><i class="fas fa-check"></i> Slider promocional</li>
+                        <li><i class="fas fa-check"></i> Mapa de ubicación</li>
+                        <li><i class="fas fa-check"></i> Redes sociales</li>
+                        <li><i class="fas fa-check"></i> Botón de contacto</li>
+                        <li><i class="fas fa-check"></i> Botón WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Mantenimiento incluido</li>
+                        <li><i class="fas fa-check"></i> Personalización por eventos</li>
+                        <li><i class="fas fa-check"></i> Cambios de diseño</li>
+                        <li><i class="fas fa-check"></i> Soporte prioritario</li>
+                    </ul>
+                    <a href="https://wa.me/5493873407054?text=Hola%2C%20quiero%20el%20Plan%20Premium%20de%20Markentas" target="_blank" class="btn btn-primary">Elegir Plan Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantia Section -->
+    <section class="garantia" id="garantia">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestra Garantía</h2>
+                <p>Te acompañamos sin compromisos largos</p>
+            </div>
+            <div class="garantia-grid">
+                <div class="garantia-card">
+                    <i class="fas fa-file-lines"></i>
+                    <h3>Sin Contratos Largos</h3>
+                    <p>Podes cancelar cuando quieras. Sin penalidades ni letraschicas.</p>
+                </div>
+                <div class="garantia-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Dominio a Tu Nombre</h3>
+                    <p>El dominio es 100% tuyo. Tenés el control total de tu presencia digital.</p>
+                </div>
+                <div class="garantia-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Independencia Total</h3>
+                    <p>Tu catálogo funciona independientemente. No dependés de plataformas que pueden desaparecer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clientes Section -->
+    <section class="clientes" id="clientes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Clientes</h2>
+                <p>Conocenos a través de nuestros proyectos</p>
+            </div>
+            <div class="clientes-grid">
+                <a href="https://markentas.github.io/organogold/" target="_blank" class="cliente-card">
+                    <div class="cliente-image">
+                        <img src="https://markentas.github.io/organogold/img/organogold-preview.png" alt="OrganoGold">
+                    </div>
+                    <div class="cliente-info">
+                        <h3>OrganoGold</h3>
+                        <p>Café Premium</p>
+                    </div>
+                </a>
+
+                <a href="https://markentas.github.io/dulcesmazza/" target="_blank" class="cliente-card">
+                    <div class="cliente-image">
+                        <img src="https://markentas.github.io/dulcesmazza/img/dulcesmazza-preview.png" alt="Dulces Mazza">
+                    </div>
+                    <div class="cliente-info">
+                        <h3>Dulces Mazza</h3>
+                        <p>Masas Caseras</p>
+                    </div>
+                </a>
+
+                <a href="https://markentas.github.io/invitacionesdigitales/" target="_blank" class="cliente-card">
+                    <div class="cliente-image">
+                        <img src="https://markentas.github.io/invitacionesdigitales/img/invitacion-preview.png" alt="Invitaciones Digitales">
+                    </div>
+                    <div class="cliente-info">
+                        <h3>Invitaciones Digitales</h3>
+                        <p>Invitaciones para Eventos</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>¿Listo para digitalizar tu negocio?</h2>
+            <p>Te ayudamos a crear tu catálogo digital en pocos días</p>
+            <a href="https://wa.me/5493873407054?text=Hola%2C%20quiero%20empezar%20con%20Markentas" target="_blank" class="btn">
+                <i class="fab fa-whatsapp"></i>
+                Contactanos Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <a href="/" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-link"></i> Markentas
+                </a>
+            </div>
+            
+            <div class="footer-social">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5493873407054" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <div class="footer-contact">
+                <p>Salvador Mazza, Salta</p>
+                <a href="https://wa.me/5493873407054" target="_blank">+54 9 387 3407 054</a>
+            </div>
+
+            <div class="footer-copy">
+                &copy; 2026 Markentas. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
