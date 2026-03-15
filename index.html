@@ -113,6 +113,14 @@
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
         }
 
+        .btn-disabled {
+            background: rgba(37, 99, 235, 0.5);
+            color: #ffffff;
+            cursor: not-allowed;
+            box-shadow: none;
+            border: 1px solid #bfdbfe;
+        }
+
         /* Header */
         header {
             position: fixed;
@@ -386,8 +394,7 @@
 
         .dominio-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1fr;
             align-items: center;
         }
 
@@ -421,31 +428,6 @@
         .dominio-features li i {
             color: var(--success);
             font-size: 1.2rem;
-        }
-
-        .dominio-price {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 40px;
-            border-radius: 20px;
-            color: var(--white);
-            text-align: center;
-        }
-
-        .dominio-price .price {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .dominio-price .price-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .dominio-price p {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            opacity: 0.8;
         }
 
         /* Planes Section */
@@ -742,8 +724,6 @@
             justify-content: center;
             gap: 15px;
             margin-bottom: 30px;
-            /* --- Temporalmente */
-            display: none;
         }
 
         .footer-social a {
@@ -784,6 +764,21 @@
             font-size: 0.9rem;
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
         }
 
         /* Responsive */
@@ -966,12 +961,6 @@
                         <li><i class="fas fa-check-circle"></i> Opción de dominio propio (ej: .com, .ar)</li>
                     </ul>
                 </div>
-                <div class="dominio-price">
-                    <div class="price">$20.000</div>
-                    <div class="price-label">Configuración Inicial</div>
-                    <p>Puesta en marcha de tu panel y despliegue técnico</p>
-                    <a href="#planes" class="btn" style="background: white; color: var(--primary); margin-top: 20px;">Ver Planes Mensuales</a>
-                </div>
             </div>
         </div>
     </section>
@@ -1004,7 +993,7 @@
                     <a href="https://wa.me/5493873407054?text=Hola%2C%20quiero%20el%20Plan%20Base%20de%20Markentas" target="_blank" class="btn btn-primary">Elegir Plan Base</a>
                 </div>
                 <div class="plan-card premium">
-                    <span class="plan-badge">Más Popular</span>
+                    <span class="plan-badge">Sin Cupos</span>
                     <h3 class="plan-name">Plan Premium</h3>
                     <div class="plan-price">$80.000<span>/mes</span></div>
                     <div class="plan-divider"></div>
@@ -1021,7 +1010,7 @@
                         <li><i class="fas fa-check"></i> Cambios de diseño</li>
                         <li><i class="fas fa-check"></i> Soporte prioritario</li>
                     </ul>
-                    <a href="https://wa.me/5493873407054?text=Hola%2C%20quiero%20el%20Plan%20Premium%20de%20Markentas" target="_blank" class="btn btn-primary">Elegir Plan Premium</a>
+                    <a href="javascript:void(0)" class="btn btn-disabled">Elegir Plan Premium</a>
                 </div>
             </div>
         </div>
@@ -1117,14 +1106,18 @@
             </div>
 
             <div class="footer-social">
-                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/markentas/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/equipomarkentas" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/5493873407054" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
 
             <div class="footer-contact">
                 <p>Salvador Mazza, Salta</p>
                 <a href="https://wa.me/5493873407054" target="_blank">+54 9 387 3407 054</a>
+            </div>
+
+            <div class="footer-links">
+                <a href="privacidad.html">Política de Privacidad</a>
             </div>
 
             <div class="footer-copy">
